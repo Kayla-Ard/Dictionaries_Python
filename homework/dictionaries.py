@@ -58,9 +58,9 @@ def open_new_ticket(tickets, counter):
     else:
         print("Please enter a valid response!")
     
-    tickets[counter] = {"Customers": name, "Issue": issue, "Status": status}
+    tickets[counter] = {"Customer": name, "Issue": issue, "Status": status}
 
-def update_status(tickets): #This function is not working!
+def update_status(tickets):
     print("Let's get your status changed!")
     status = input("Enter you unique id ticket number you would like to change the status on: ").title()
     if status in tickets:
@@ -91,27 +91,27 @@ def display_tickets(tickets):
     elif display == "2":
         for key in tickets:
             if tickets[key]["Issue"] == "Login Problem":
-                print(f"Here are all tickets with Login Problems:\nTicket Number: {key} Customer Name: {tickets[key]["Customer"]} ")
+                print(f"Here are all tickets with Login Problems:\nTicket Number: {key} Customer Name: {tickets[key]['Customer']} ")
             
     elif display == "3":
         for key in tickets:
             if tickets[key]["Issue"] == "Payment Issue":
-                print(f"Here are all tickets with Payment Issues:\nTicket Number: {key} Customer Name: {tickets[key]["Customer"]} ")
+                print(f"Here are all tickets with Payment Issues:\nTicket Number: {key} Customer Name: {tickets[key]['Customer']} ")
     
-    elif display == "4":
+    elif display == "4": #CANNOT GET THIS ONE THING TO WORK
         for key in tickets:
             if tickets[key]["Issue"] == "Lost Ticket":
-                print(f"Here are all tickets with Lost Ticket Issues:\nTicket Number: {key} Customer Name: {tickets[key]["Customer"]} ")
+                print(f"Here are all tickets with Lost Ticket Issues:\nTicket Number: {key} Customer Name: {tickets[key]['Customer']} ")
     
     elif display == "5":
         for key in tickets:
             if tickets[key]["Status"] == "Open":
-                print(F"Here are all tickets with an Open Status:\nTicket Number: {key} Customer Name: {tickets[key]["Customer"]} ")
+                print(f"Here are all tickets with an Open Status:\nTicket Number: {key} Customer Name: {tickets[key]['Customer']} ")
     
     elif display == "6":
         for key in tickets:
             if tickets[key]["Status"] == "Closed":
-                print(F"Here are all tickets with a Closed Status:\nTicket Number: {key} Customer Name: {tickets[key]["Customer"]} ")
+                print(f"Here are all tickets with a Closed Status:\nTicket Number: {key} Customer Name: {tickets[key]['Customer']} ")
     
     elif display == "7":
         print("Returning to Main Menu")
