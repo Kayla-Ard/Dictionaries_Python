@@ -98,7 +98,7 @@ def display_tickets(tickets):
             if tickets[key]["Issue"] == "Payment Issue":
                 print(f"Here are all tickets with Payment Issues:\nTicket Number: {key} Customer Name: {tickets[key]['Customer']} ")
     
-    elif display == "4": #CANNOT GET THIS ONE THING TO WORK
+    elif display == "4": 
         for key in tickets:
             if tickets[key]["Issue"] == "Lost Ticket":
                 print(f"Here are all tickets with Lost Ticket Issues:\nTicket Number: {key} Customer Name: {tickets[key]['Customer']} ")
